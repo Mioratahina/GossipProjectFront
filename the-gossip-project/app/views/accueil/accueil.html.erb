@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TheGossipProject</title>
+</head>
+<body>
+	<h1>BIENVENUE DANS LA PAGE DES POTINS !!!</h1>
+	<p>Voici la liste de tous les potins :</p>
+	<% @gossips.each_with_index do |gos, i| %>
+    	<p>
+      		<a href="/<%= i+1 %>" ></a>
+      		Nom : <%= gos.user.first_name %><br/>
+      		Titre du gossip : <%= gos.title %>
+   			<a href="/<%= i+1 %>/potin">more details</a>
+    	</p>
+
+	<% end %>
+	
+</body>
+</html>
