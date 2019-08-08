@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DetailGossip</title>
+</head>
+<body>
+	<h1>Le detail du gossip :</h1>
+	<p>
+		<br/>
+		Titre du gossip : <%= @gossip.title %><br/>
+		Le contenu de gossip : <%= @gossip.content %><br/>
+		Date de creation : <%= @gossip.created_at %><br/><br/>
+		<a href="/user/<%= @gossip.user.id %>">Profil de l'auteur</a> <br/>
+		<a href="/">Accueil</a>
+	</p>
+</body>
+</html>
