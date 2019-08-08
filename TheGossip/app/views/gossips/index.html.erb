@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TheGossipProject</title>
+</head>
+<body>
+	<h1>Voici la liste de tous les potins :</h1>
+	<p>Clic <a href="/gossips/new">here</a> to add a new gossip</p>
+	<p>
+		<% @gossip.each do |g| %>
+			Nom : <%= g.user.first_name %><br/>
+			Titre : <%= g.title %> <a href="/gossips/<%= g.user.id %>">more details</a> <br/>
+		<% end %>
+	</p>
+	
+</body>
+</html>
