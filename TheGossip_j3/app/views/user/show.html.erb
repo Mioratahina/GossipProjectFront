@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AuthorProfil</title>
+</head>
+<body>
+	<h1>Le profil de l'auteur du gossip :</h1>
+	<p>
+		Prénom : <%= @user.first_name %><br/>
+		Nom : <%= @user.last_name %><br/>
+		Description : <%= @user.description %><br/>
+		E-mail : <%= @user.email %><br/>
+		Age : <%= @user.age %><br/>
+		City : <%= @user.city.name %><br/><br/>
+
+		<a href="/city/<%= @user.city_id %>">Ville de l'auteur</a><br/>
+   		<a href="/">Accueil</a>
+
+	</p>
+</body>
+</html>

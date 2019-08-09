@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DetailGossip</title>
+</head>
+<body>
+	<h1>Le detail du gossip :</h1>
+	<p>
+		<br/>
+		<strong>Titre du gossip : </strong> <%= @gossip.title %><br/>
+		<strong>Le contenu de gossip : </strong> <%= @gossip.content %><br/>
+		<strong>Auteur : </strong> <%= @gossip.user.first_name %><br/>
+		<strong>La ville de l'auteur : </strong> <%= @gossip.user.city.name %><br/><br/>
+		<p><strong>Comments :</strong> 
+			<ul>
+				
+					<% @gossip.comments.each do |comment| %>
+						<li><em><%= comment.content %></em> <br/></li>
+						<small><a href="/comment/<%= comment.id %>/edit">edit</a> | <a href="/comment/<%= comment.id %>" data-method='delete', data-confirm='Are you sure?'>delete</a></small><br/>
+						<small><a href="/comment/new">add a new comment</a></small>
+					<% end %>
+				
+			</ul>
+			
+		</p>
+		<a href="/user/<%= @gossip.user.id %>">Profil de l'auteur</a> <br/>
+		<a href="/city/<%= @gossip.user.city_id %>">Ville de l'auteur</a><br/>
+
+	</p>
+</body>
+</html>

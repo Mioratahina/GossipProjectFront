@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NewComment</title>
+</head>
+<body>
+	<h1>Add comment :</h1>
+	<p>
+		<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+      	<%= text_field_tag 'content', @comment.content %>  <%= submit_tag "Create Comment" %>
+
+    <% end %>
+	</p>
+</body>
+</html>
